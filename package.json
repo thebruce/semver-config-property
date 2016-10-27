@@ -1,8 +1,8 @@
 {
-  "name": "semver-config-property",
+  "name": "semver-property-retrieve-stamp",
   "version": "1.0.0",
   "description": "A stamp (stampit) based way to retrieve semver based configuration properties from config files.",
-  "main": "lib/semverConfigProperty.js",
+  "main": "lib/semver-property-retrieve-stamp.js",
   "directories": {
     "test": "test"
   },

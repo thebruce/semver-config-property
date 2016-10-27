@@ -3,7 +3,7 @@
 // Set up stamp factory.
 const config = require('../test/config/default.json');
 const stamp = require('stampit');
-const semverConfigProperty = require('../lib/semverConfigProperty');
+const semverConfigProperty = require('../lib/semver-property-retrieve-stamp');
 
 const versionConfig = semverConfigProperty.create({
   property: 'configItem',
