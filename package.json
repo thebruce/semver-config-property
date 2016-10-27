@@ -1,0 +1,59 @@
+{
+  "name": "semver-config-property",
+  "version": "1.0.0",
+  "description": "A stamp (stampit) based way to retrieve semver based configuration properties from config files.",
+  "main": "lib/semverConfigProperty.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover --print both nodeunit ./ test",
+    "lint": "eslint .",
+    "coverage": "istanbul check-coverage --statements 95 --lines 95 --branches 95 --functions 100",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thebruce/semver-config-property.git"
+  },
+  "keywords": [
+    "version-attribute",
+    "semver",
+    "properties",
+    "config",
+    "stampit"
+  ],
+  "author": "David Diers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebruce/semver-config-property/issues"
+  },
+  "homepage": "https://github.com/thebruce/semver-config-property#readme",
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "eslint-find-rules": "^1.13.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "ghooks": "^1.0.1",
+    "istanbul": "^0.4.2",
+    "nodeunit": "^0.10.2",
+    "npm-run-all": "^3.1.1",
+    "semantic-release": "^4.3.5"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  },
+  "dependencies": {
+    "config": "^1.21.0",
+    "lodash": "^4.16.4",
+    "stampit": "^3.0.4",
+    "version-attribute": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
